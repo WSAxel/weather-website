@@ -1,0 +1,14 @@
+input{
+    text-align: center;
+}
+.container{
+    text-align: center;
+    border: 3px solid black;
+}
+#textInput{
+
+    margin-left: 60%;
+}
+#submitInput{
+    float: right;
+}
