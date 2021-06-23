@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <title>Website for weather</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="front.js">
+
 </head>
 <body>
-<div class="container" id="container">
-    <div class="input-group md-4">
-        <input id="textInput" class="form-control" type="text" placeholder="Search">
+<div class="container" id="container1">
+    <div class="input-group md-4" id="group1">
+        <input id="textInput" class="form-control" type="text" placeholder="Search a city">
         <div class="input-group-append">
-        <button id="submitInput" class="btn btn-primary" value="Search">Search</button>
+        <button type="button" id="submitInput" class="btn btn-primary" value="Search" onclick="searchCity()" >Search</button>
         </div>
     </div>
     <div class="Info">
-        <h2 class="mainCityName"></h2>
-        <p class="mainWeather"></p>
-        <p class="mainTemperature"></p>
+        <h2 class="mainCityName" id="mainCityName"></h2>
+        <p class="mainWeather" id="mainWeather"></p>
+        <p class="mainTemperature" id="mainTemperature"></p>
     </div>
 </div>
 <div class="container">
     <div class="mini-container">
-        <h1 class="cityName"></h1>
-        <p class="weather"></p>
-        <p class="temperature"></p>
+        <h1 class="cityName">Oslo</h1>
+        <p class="weather">Clouded</p>
+        <p class="temperature">15</p>
     </div>
     <div class="mini-container">
         <h1 class="cityName"></h1>
@@ -48,5 +49,6 @@
         <p class="temperature"></p>
     </div>
 </div>
+<script src="front.js"></script>
 </body>
 </html>
