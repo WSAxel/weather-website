@@ -29,10 +29,10 @@ fetch("https://api.openweathermap.org/data/2.5/find?q=Tokyo&units=metric&appid=d
     .then(response => response.json())
     .then(data => {
             console.log(data)
-            let nameValue =data['list']['0']['name'];
-            let weatherValue= data['list']['0']['weather']['0']['description'];
-            let tempValue= data['list']['0']['main']['temp'];
-            let iconValue= data['list']['0']['weather']['0']['icon']
+            let nameValue =data['list']['1']['name'];
+            let weatherValue= data['list']['1']['weather']['0']['description'];
+            let tempValue= data['list']['1']['main']['temp'];
+            let iconValue= data['list']['1']['weather']['0']['icon']
 
             name1.innerHTML =nameValue;
             weather1.innerHTML =weatherValue;

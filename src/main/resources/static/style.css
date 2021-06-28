@@ -7,11 +7,14 @@ input[type="text"]{
 }
 .container{
     font-family: fantasy;
-    border: 3px solid black;
+    border: 3px solid white;
     text-align: center;
+    background-color: rgba(236, 231, 231, 0.52);
+    border-radius: 30px;
 }
-#textInput{
-
+#container1{
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 #group1{
     margin-top: 5%;
