@@ -21,6 +21,12 @@ function searchCity() {
             })
 
 }
+document.querySelector(".form-control").addEventListener("keyup", function (event){
+    //remove the event inside the function() and the if (event.key == "Enter"){} for automatic search upon writing.
+    if (event.key == "Enter") {
+        searchCity();
+    }
+});
 let name1 = document.getElementById("cityName1")
 let weather1 =document.getElementById("weather1")
 let temp1 =document.getElementById("temperature1")
