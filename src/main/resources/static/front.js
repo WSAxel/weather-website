@@ -3,6 +3,8 @@ let name = document.getElementById("mainCityName")
 let weather = document.getElementById("mainWeather")
 let temp = document.getElementById("mainTemperature")
 let icon = document.getElementById("icon")
+const rainIcon =document.getElementById("rainIcon")
+let rain = document.getElementById("rain")
 function searchCity() {
         fetch("https://api.openweathermap.org/data/2.5/find?q="+textInput.value+
             "&units=metric&appid=dd57959a67b88e214d382b42c517d74e"
@@ -13,6 +15,13 @@ function searchCity() {
                 let weatherValue= data['list']['0']['weather']['0']['description'];
                 let tempValue= data['list']['0']['main']['temp'];
                 let iconValue= data['list']['0']['weather']['0']['icon']
+                rainIcon.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
+                try {
+                    let rainValue= data['list']['0']['rain']['1h']
+                    rain.innerHTML =rainValue+" mm"
+                } catch (error){
+                    rain.innerHTML ="0 mm"
+                }
 
                 name.innerHTML =nameValue;
                 weather.innerHTML =weatherValue;
