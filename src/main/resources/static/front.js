@@ -15,18 +15,17 @@ function searchCity() {
                 let weatherValue= data['list']['0']['weather']['0']['description'];
                 let tempValue= data['list']['0']['main']['temp'];
                 let iconValue= data['list']['0']['weather']['0']['icon']
-                //rainIcon.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
                 rainIcon[0].src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
                 try {
                     let rainValue= data['list']['0']['rain']['1h']
-                    rain.innerHTML =rainValue+" mm"
+                    rain.innerHTML ="rainfall: "+rainValue+" mm"
                 } catch (error){
-                    rain.innerHTML ="0 mm"
+                    rain.innerHTML ="rainfall: 0 mm"
                 }
 
                 name.innerHTML =nameValue;
-                weather.innerHTML =weatherValue;
-                temp.innerHTML =tempValue+" °C";
+                weather.innerHTML ="weather: "+weatherValue;
+                temp.innerHTML ="temperature: "+tempValue+" °C";
                 icon.src = " https://openweathermap.org/img/wn/"+iconValue +"@2x.png";
             })
 
@@ -53,14 +52,14 @@ fetch("https://api.openweathermap.org/data/2.5/find?q=Tokyo&units=metric&appid=d
         rainIcon[1].src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
         try {
             let rainValue= data['list']['0']['rain']['1h']
-            rain1.innerHTML =rainValue+" mm"
+            rain1.innerHTML ="rainfall: "+rainValue+" mm"
         } catch (error){
-            rain1.innerHTML ="0 mm"
+            rain1.innerHTML ="rainfall: 0 mm"
         }
 
             name1.innerHTML =nameValue;
-            weather1.innerHTML =weatherValue;
-            temp1.innerHTML =tempValue+" °C";
+            weather1.innerHTML ="weather: "+weatherValue;
+            temp1.innerHTML ="temperature: "+tempValue+" °C";
             icon1.src = " https://openweathermap.org/img/wn/"+iconValue +"@2x.png";
 
     })
@@ -80,13 +79,13 @@ fetch("https://api.openweathermap.org/data/2.5/find?q=London&units=metric&appid=
         rainIcon[2].src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
         try {
             let rainValue= data['list']['0']['rain']['1h']
-            rain2.innerHTML =rainValue+" mm"
+            rain2.innerHTML ="rainfall: "+rainValue+" mm"
         } catch (error){
-            rain2.innerHTML ="0 mm"
+            rain2.innerHTML ="rainfall: 0 mm"
         }
             name2.innerHTML =nameValue;
-            weather2.innerHTML =weatherValue;
-            temp2.innerHTML =tempValue+" °C";
+            weather2.innerHTML ="weather: "+weatherValue;
+            temp2.innerHTML ="temperature: "+tempValue+" °C";
             icon2.src = " https://openweathermap.org/img/wn/"+iconValue +"@2x.png";
 
     })
@@ -106,13 +105,13 @@ fetch("https://api.openweathermap.org/data/2.5/find?q=New%20York&units=metric&ap
         rainIcon[3].src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkSrgcNbcA121rKu-PnIwTEclWPLHp8GGg&usqp=CAU"
         try {
             let rainValue= data['list']['0']['rain']['1h']
-            rain3.innerHTML =rainValue+" mm"
+            rain3.innerHTML ="rainfall: "+rainValue+" mm"
         } catch (error){
-            rain3.innerHTML ="0 mm"
+            rain3.innerHTML ="rainfall: 0 mm"
         }
             name3.innerHTML =nameValue;
-            weather3.innerHTML =weatherValue;
-            temp3.innerHTML =tempValue+" °C";
+            weather3.innerHTML ="weather: "+weatherValue;
+            temp3.innerHTML ="temperature: "+tempValue+" °C";
             icon3.src = " https://openweathermap.org/img/wn/"+iconValue +"@2x.png";
 
     })
