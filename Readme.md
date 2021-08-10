@@ -1,6 +1,6 @@
 Weather web app
 
-This project is a web based weather map for searching cities of users choice and also listing
+This project is a web based weather site for searching cities of users choice and also listing
 some popular known ones. 
 
 The information shown is the city name, weather(with text and icon) and the temperature in celsius.
